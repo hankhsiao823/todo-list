@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/main.css"/>
+  <link rel="stylesheet" href="./styles/modal.css"/>
+  <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer" 
+  />
+</head>
+<body>
+  <header><h1>Todo List</h1></header>
+  <div class="sort">
+    <button id="addTodo" >Add</button>
+    <button id="sortTodo">Sort</button>
+  </div>
+  <section>
+  </section>
+
+  <div id="formModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form id="todo-form">
+          <label for="title">Title</label>
+          <input type="text" id="title" name="title" required/>
+          <label for="date">Date</label>
+          <input type="date" id="date" name="date"/>
+          <label for="content">Content</label>
+        <textarea id="content" name="content" rows="4" cols="50" required></textarea> 
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="showContentBox" class="show-content-box">
+    <div class="show-content">
+      <span class="close">&times;</span>
+      <div id="todoContent"></div>
+    </div>
+  </div>
+
+</body>
+<script src="./js/todo-list.js"></script>
+<script src="./js/form-modal.js"></script>
+</html>

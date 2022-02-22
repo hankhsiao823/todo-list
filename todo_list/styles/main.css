@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+i {
+  pointer-events: none;
+}
+
+body {
+  background: linear-gradient(60deg, #73de72, #2f4858);
+  min-height: 100vh;
+  height: 100%;
+}
+
+header {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 15px;
+}
+
+form input,
+textarea {
+  border: 1px solid #628281;
+  border-radius: 5px;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.25rem;
+  margin: 0.1rem;
+}
+
+form label {
+  margin: 10px 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #628281;
+}
+
+input,
+textarea:focus {
+  outline: none;
+}
+
+form textarea {
+  max-width: 100%;
+}
+
+form button {
+  align-self: end;
+  margin: 15px;
+  border: 2px solid #dadde2;
+}
+
+button {
+  border: none;
+  width: 80px;
+  border-radius: 3px;
+  height: 38px;
+  background-color: white;
+  color: #628281;
+  font-size: large;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #dadde2;
+}
+
+button:active {
+  background-color: #889fa5;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section div.todo {
+  transition: all 0.5s;
+  width: 40vw;
+  display: flex;
+  /* align-items: center; */
+  margin: 0.5rem 0rem;
+}
+
+section p {
+  background-color: white;
+  color: black;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 40px;
+}
+
+.todo-text {
+  width: 60%;
+  cursor: pointer;
+}
+
+section p.todo-time {
+  display: flex;
+  width: 30%;
+  font-size: 1.25rem;
+  text-align: center;
+  align-items: center;
+}
+
+section div.todo button {
+  color: white;
+  min-height: 48px;
+  margin: 0px 5px;
+}
+
+section div.todo .todo-content {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+button.trash {
+  background-color: lightpink;
+  transition: all 0.3s;
+}
+
+button.trash:hover {
+  background-color:hotpink;
+}
+
+button.trash:active {
+  background-color:lightpink;
+}
+
+button.complete {
+  background-color: lightgreen;
+}
+
+button.complete:hover {
+  background-color:forestgreen;
+}
+
+button.complete:active {
+  background-color:lightgreen;
+}
+
+.done{
+  opacity: 0.5;
+  text-decoration: line-through;
+  text-decoration-thickness: 0.2rem;
+}
+
+div.sort{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.sort button{
+  margin: 1rem 1rem;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+@media (max-width:1280px){
+  section div.todo {
+    width: 60vw;
+  }
+}
+
+@media (max-width:765px){
+  section div.todo {
+    width: 80vw;
+  }
+  
+  .todo-text {
+    width: 50%;
+  }
+  
+  section p.todo-time {
+    width: 40%;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width:475px){
+  section div.todo {
+    width: 95vw;
+  }
+  
+  .todo-text {
+    font-size: 1.5rem;
+    line-height: 35px;
+  }
+  
+  section p.todo-time {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width:365px){
+  section div.todo {
+    width: 95vw;
+  }
+  
+  .todo-text {
+    width: 40%;
+  }
+  
+  section p.todo-time {
+    width: 50%;
+  }
+}
