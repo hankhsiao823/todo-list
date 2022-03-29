@@ -1,1 +1,1 @@
-#The local todo-list application.
+#The todo-list application.
